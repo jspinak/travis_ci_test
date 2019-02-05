@@ -1,5 +1,10 @@
-before_install:
-- sudo apt-get update
-- sudo apt-get install jq
-- sudo apt-get install curl
+language: shell
+addons:
+  apt:
+    update: true
+    packages:
+      - jq
+      - curl
+script:
+  - ./test.sh
 
